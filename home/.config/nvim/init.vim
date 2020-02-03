@@ -79,6 +79,8 @@ nmap <leader>d :CocList diagnostics<CR>
 
 nmap <leader>gs :Gedit :<CR>
 
+nmap ; :
+
 map  f <Plug>(easymotion-bd-f)
 nmap f <Plug>(easymotion-overwin-f)
 
