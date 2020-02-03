@@ -47,6 +47,9 @@ set cursorline
 " disable annoying swapfiles
 set noswapfile
 
+" disable retarded netrw 
+let loaded_netrwPlugin = 1
+
 set incsearch
 set hlsearch
 
