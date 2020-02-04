@@ -15,7 +15,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-fugitive'
 
 Plug 'tpope/vim-commentary'
-Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
@@ -73,6 +72,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <leader>f :Clap files <CR>
 nmap <leader>b :Clap buffers<CR>
 nmap <leader>l :Clap grep<CR>
+nmap <leader>s :Clap blines<CR>
 nmap <leader>e :Clap filer<CR>
 nmap <leader>a :CocAction<CR>
 nmap <leader>d :CocList diagnostics<CR>
@@ -80,9 +80,6 @@ nmap <leader>d :CocList diagnostics<CR>
 nmap <leader>gs :Gedit :<CR>
 
 nmap ; :
-
-map  f <Plug>(easymotion-bd-f)
-nmap f <Plug>(easymotion-overwin-f)
 
 inoremap <silent><expr> <c-n> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -108,7 +105,6 @@ nmap <C-l> <C-W>l
 
 nmap <C-q> :quit<CR>
 nmap <C-s> :write<CR>
-nmap <leader>so :so %<CR>
 
 function! s:MoveCurrentFile()
   let l:oldName = @%

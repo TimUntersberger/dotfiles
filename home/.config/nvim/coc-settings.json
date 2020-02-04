@@ -1,3 +1,12 @@
 {
-    "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "json", "javascript", "typescript", "javascriptreact", "typescriptreact"]
+    "coc.preferences.formatOnSaveFiletypes": [
+      "css",
+      "Markdown",
+      "json",
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact"
+    ],
+    "java.errors.incompleteClasspath.severity": "ignore"
 }
