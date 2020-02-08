@@ -9,7 +9,6 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'tpope/vim-obsession'
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'tpope/vim-fugitive'
@@ -18,9 +17,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
-
-"Plug 'junegunn/fzf.vim'
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
 let g:coc_global_extensions=[
@@ -32,11 +28,6 @@ let g:coc_global_extensions=[
   \'coc-java'
 \]
 
-let g:fzf_action = {
-  \ 'ctrl-h': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \ }
-
 colorscheme gruvbox
 
 set splitright
@@ -46,7 +37,7 @@ set cursorline
 " disable annoying swapfiles
 set noswapfile
 
-" disable retarded netrw 
+"j disable retarded netrw 
 let loaded_netrwPlugin = 1
 
 set incsearch
@@ -116,5 +107,14 @@ function! s:MoveCurrentFile()
 endfunction
 
 command! -nargs=0 Mv call <SID>MoveCurrentFile()
+
+function! s:StartProfile()
+  profile start profile.log
+  profile file *
+  profile func *
+endfunction
+
+command! -nargs=0 StartProfiling call <SID>StartProfile()
+command! -nargs=0 StopProfiling profile stop
 
 nmap <leader>mv :Mv<CR>
