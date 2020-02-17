@@ -27,5 +27,3 @@ export PATH="/home/tim/.yarn/bin:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/tim/.sdkman"
 [[ -s "/home/tim/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tim/.sdkman/bin/sdkman-init.sh"
-
-[ -z "$TMUX" ] && tmux

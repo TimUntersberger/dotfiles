@@ -25,10 +25,15 @@ let g:coc_global_extensions=[
   \'coc-emmet',
 	\'coc-tsserver',
   \'coc-prettier',
-  \'coc-java'
+  \'coc-java',
+  \'coc-elixir',
+  \'coc-rls'
 \]
 
 colorscheme gruvbox
+
+" Disable auto pairs and auto indent stuff when pasting. REALLLLLLYYYY USEFULL
+set pastetoggle=<F3>
 
 set splitright
 
@@ -37,7 +42,7 @@ set cursorline
 " disable annoying swapfiles
 set noswapfile
 
-"j disable retarded netrw 
+" disable retarded netrw 
 let loaded_netrwPlugin = 1
 
 set incsearch
@@ -107,6 +112,7 @@ function! s:MoveCurrentFile()
 endfunction
 
 command! -nargs=0 Mv call <SID>MoveCurrentFile()
+nmap <leader>mv :Mv<CR>
 
 function! s:StartProfile()
   profile start profile.log
@@ -116,5 +122,3 @@ endfunction
 
 command! -nargs=0 StartProfiling call <SID>StartProfile()
 command! -nargs=0 StopProfiling profile stop
-
-nmap <leader>mv :Mv<CR>
