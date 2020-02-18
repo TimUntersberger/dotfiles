@@ -16,6 +16,8 @@ or `homesick clone git@github.com:TimUntersberger/dotfiles.git` if you want to u
 * vim-plug
 * tmux
 * tpm
+* docker
+* docker-compose
 
 ## Additional setup instructions for using x2go (something like an x server) instead of basic ssh
 
@@ -69,6 +71,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 ```
 install tmux, tpm and install packages
+
+## docker | docker-compose
+
+`sudo apt install docker.io docker-compose`
 
 ## x2go
 
