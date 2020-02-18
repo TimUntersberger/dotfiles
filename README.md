@@ -55,7 +55,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 ### install plugins
 
-`vim +PlugInstall +q`
+`vim +PlugInstall +q +q`
 
 ## tmux | tpm
 
