@@ -34,7 +34,7 @@ or `homesick clone git@github.com:TimUntersberger/dotfiles.git` if you want to u
 ## zsh | antigen
 
 ```bash
-sudo apt install zsh &&
+sudo apt install zsh -y &&
 curl -L git.io/antigen > ~/.antigen.zsh
 ```
 
@@ -66,7 +66,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 ## tmux | tpm
 
 ```bash
-sudo apt install tmux &&
+sudo apt install tmux -y &&
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 ```
@@ -74,7 +74,7 @@ install tmux, tpm and install packages
 
 ## docker | docker-compose
 
-`sudo apt install docker.io docker-compose`
+`sudo apt install docker.io docker-compose -y`
 
 ## x2go
 
@@ -84,7 +84,7 @@ either run `export DISPLAY=:1` for the current terminal session or add it to the
 
 ### ssh
 
-`sudo apt install openssh-server`
+`sudo apt install openssh-server -y`
 
 openssh-server should automatically configure everything required. It starts a ssh daemon automatically.
 
@@ -100,7 +100,7 @@ this just appends the newly created ssh key to the authorized_keys list to give 
 
 ### x2goserver
 
-`sudo apt install x2goserver x2goserver-xsession`
+`sudo apt install x2goserver x2goserver-xsession -y`
 
 this configures a service called `x2goserver`. the service has to be manually started.
 
