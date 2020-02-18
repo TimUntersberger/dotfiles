@@ -1,5 +1,5 @@
 homesick clone https://github.com/TimUntersberger/dotfiles &&
-sudo apt install zsh tmux -y &&
+sudo apt install zsh tmux docker.io docker-compose -y &&
 curl -L git.io/antigen > ~/.antigen.zsh &&
 chsh $(which zsh) &&
 curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage &&
