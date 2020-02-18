@@ -4,6 +4,10 @@
 
 or `homesick clone git@github.com:TimUntersberger/dotfiles.git` if you want to use ssh.
 
+## Requirements
+
+* Have homesick installed
+
 ## Installed dependencies after completing the setup instructions
 
 * zsh
