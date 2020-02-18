@@ -29,7 +29,13 @@ or `homesick clone git@github.com:TimUntersberger/dotfiles.git` if you want to u
 
 ## Lazy
 
+### only tools 
+
 `curl https://raw.githubusercontent.com/TimUntersberger/dotfiles/master/startup-tools.sh | bash`
+
+### full
+
+`curl https://raw.githubusercontent.com/TimUntersberger/dotfiles/master/startup-full.sh | bash`
 
 ## zsh | antigen
 
