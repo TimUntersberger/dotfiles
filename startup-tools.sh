@@ -9,4 +9,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
 vim +PlugInstall +q +q &&
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
-~/.tmux/plugins/tpm/scripts/install_plugins.sh
+~/.tmux/plugins/tpm/scripts/install_plugins.sh &&
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb &&
+sudo dpkg -i ripgrep_11.0.2_amd64.deb
