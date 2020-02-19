@@ -18,13 +18,14 @@ or `homesick clone git@github.com:TimUntersberger/dotfiles.git` if you want to u
 * tpm
 * docker
 * docker-compose
+* ripgrep
 
 ## Additional setup instructions for using x2go (something like an x server) instead of basic ssh
 
 * x2go
 * i3
 * dmenu
-* xterm/uxterm
+* gnome-terminal
 * feh
 
 ## Lazy
@@ -82,6 +83,13 @@ install tmux, tpm and install packages
 
 `sudo apt install docker.io docker-compose -y`
 
+## ripgrep
+
+```bash
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb &&
+sudo dpkg -i ripgrep_11.0.2_amd64.deb
+```
+
 ## x2go
 
 First of all it is important to setup ssh on the server.
@@ -120,4 +128,4 @@ don't forget to select the desired desktop environment (for i3 choose custom and
 
 ## i3 | dmenu | xterm/uxterm | feh
 
-`sudo apt install i3 suckless-tools xterm feh -y`
+`sudo apt install i3 suckless-tools gnome-terminal feh -y`
