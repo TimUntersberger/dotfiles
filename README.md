@@ -14,6 +14,8 @@ or `homesick clone git@github.com:TimUntersberger/dotfiles.git` if you want to u
 * antigen
 * neovim
 * vim-plug
+* nodejs (is required for coc.nvim)
+* n (a nodejs version manager)
 * tmux
 * tpm
 * docker
@@ -64,6 +66,13 @@ sudo mv nvim.appimage /usr/bin/nvim
 ```bash
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+### nodejs
+
+```bash
+curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n &&
+bash n lts
 ```
 
 ### install plugins
