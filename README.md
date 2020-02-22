@@ -26,7 +26,7 @@ or `homesick clone git@github.com:TimUntersberger/dotfiles.git` if you want to u
 
 * x2go
 * i3
-* dmenu
+* rofi
 * gnome-terminal
 * feh
 
@@ -135,6 +135,6 @@ start the client and create a new session. change the user to your username and 
 
 don't forget to select the desired desktop environment (for i3 choose custom and change the command to `i3`).
 
-## i3 | dmenu | xterm/uxterm | feh
+## i3 | rofi | gnome-terminal | feh
 
-`sudo apt install i3 suckless-tools gnome-terminal feh -y`
+`sudo apt install i3 gnome-terminal feh rofi -y`
