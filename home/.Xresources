@@ -1,10 +1,16 @@
 XTerm*renderFont: true
 XTerm*faceName: DejaVu Sans Mono
-XTerm*faceSize: 10
+XTerm*faceSize: 11
 
 UXTerm*renderFont: true
 UXTerm*faceName: DejaVu Sans Mono
-UXTerm*faceSize: 10
+UXTerm*faceSize: 11
+
+/* Add ctrl+shift+c and ctrl+shift+v binding */
+XTerm*selectToClipboard: true
+XTerm*VT100*translations: #override \n\
+    Ctrl Shift <Key>V:  insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>C:        select-end(CLIPBOARD)
 
 ! -----------------------------------------------------------------------------
 ! File: gruvbox-urxvt256.xresources
