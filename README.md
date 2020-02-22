@@ -1,15 +1,8 @@
 # Setup
 
-`homesick clone https://github.com/TimUntersberger/dotfiles`
-
-or `homesick clone git@github.com:TimUntersberger/dotfiles.git` if you want to use ssh.
-
-## Requirements
-
-* Have homesick installed
-
 ## Installed dependencies after completing the setup instructions
 
+* homesick
 * zsh
 * antigen
 * neovim
@@ -39,6 +32,13 @@ or `homesick clone git@github.com:TimUntersberger/dotfiles.git` if you want to u
 ### full
 
 `curl https://raw.githubusercontent.com/TimUntersberger/dotfiles/master/startup-full.sh | bash`
+
+## homesick
+
+```bash
+sudo apt install ruby &&
+gem install homesick
+```
 
 ## zsh | antigen
 
