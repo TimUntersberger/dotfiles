@@ -1,3 +1,5 @@
+sudo apt install ruby &&
+gem install homesick &&
 homesick clone https://github.com/TimUntersberger/dotfiles &&
 sudo apt install zsh tmux docker.io docker-compose -y &&
 curl -L git.io/antigen > ~/.antigen.zsh &&
