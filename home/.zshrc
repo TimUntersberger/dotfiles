@@ -20,6 +20,8 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 
 export XDG_CONFIG_HOME=$HOME/.config
 
+export TERM="xterm-256color"
+
 export PATH="/home/tim/.yarn/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
