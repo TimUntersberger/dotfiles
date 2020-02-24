@@ -25,7 +25,8 @@ let g:coc_global_extensions=[
   \'coc-emmet',
 	\'coc-tsserver',
   \'coc-prettier',
-  \'coc-java'
+  \'coc-java',
+  \'coc-rls'
 \]
 
 colorscheme gruvbox

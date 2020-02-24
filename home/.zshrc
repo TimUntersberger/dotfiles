@@ -29,3 +29,5 @@ export SDKMAN_DIR="/home/tim/.sdkman"
 [[ -s "/home/tim/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tim/.sdkman/bin/sdkman-init.sh"
 
 [ -z "$TMUX" ] && tmux
+
+export TERM=xterm-256color
