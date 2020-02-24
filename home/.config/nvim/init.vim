@@ -1,5 +1,4 @@
 let mapleader=','
-
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'morhetz/gruvbox'
 
@@ -62,49 +61,6 @@ set shortmess+=c
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-function! s:OpenNetrw()
-  if @% == ''
-    :e .
-  else
-    :e %:h
-  endif
-endfunction
-
-function! s:OpenNetrwInProjectRoot()
-  let l:dir = finddir('.git/..', expand('%:p:h').';')
-
-  if l:dir == ''
-    echo 'No root folder found'
-  else
-    execute 'edit ' . l:dir
-  endif
-endfunction
-
-function! s:DeleteClapFile()
-  echom "deleted"
-endfunction
-
-" function! s:ClapFiler()
-"   function! ClapFilerMappings()
-"     echom "called mappings"
-"     inoremap <silent> <buffer> <C-d> :call <SID>DeleteClapFile()<CR>
-"   endfunction
-
-"   function! RemoveClapFilerMappings()
-"     echom "after"
-"     aug ClapFilerMappings
-"       au!
-"     aug END
-"   endfunction
-"   aug ClapFilerMappings
-"     au!
-"     au filetype clap_input call ClapFilerMappings()
-"     au filetype clap_input au  <buffer> call RemoveClapFilerMappings()
-"   aug END
-"   echom "called"
-"   :Clap filer
-" endfunction
-
 " nmap <leader>f :Files <CR>
 " nmap <leader>b :Buffers<CR>
 " nmap <leader>l :Ag<CR>
@@ -112,9 +68,7 @@ nmap <leader>f :Clap files <CR>
 nmap <leader>b :Clap buffers<CR>
 nmap <leader>l :Clap grep<CR>
 nmap <leader>s :Clap blines<CR>
-nmap <silent> <leader>ef :call <SID>OpenNetrw()<CR>
-nmap <silent> <leader>ep :call <SID>OpenNetrwInProjectRoot()<CR>
-" nmap <silent> <leader>e :call <SID>ClapFiler()<CR>
+nmap <silent> <leader>e :Explore<CR>
 nmap <leader>a :CocAction<CR>
 
 nmap <leader>gs :Gedit :<CR>
@@ -177,22 +131,15 @@ endfunction
 
 command! -nargs=0 CloseClap  call <SID>CloseClapFnc()
 
-function! s:NetrwCreateDirectory()
-  let l:name = input("Directory name: ")
-  silent execute  '!mkdir ' . b:netrw_curdir . '/' . l:name
-  call feedkeys("\<C-l>")
-endfunction
-
 function! s:NetrwCreateFile()
-  let l:name = input("File name: ")
+  let l:name = input("Please give file name: ")
   silent execute  '!touch ' . b:netrw_curdir . '/' . l:name
   call feedkeys("\<C-l>")
 endfunction
 
 function! s:NetrwMappings()
-  silent! unmap <buffer> d
-  nmap <buffer> cd :call <SID>NetrwCreateDirectory()<CR>
-  nmap <buffer> cf :call <SID>NetrwCreateFile()<CR>
+  nmap <buffer> f :call <SID>NetrwCreateFile()<CR>
+  nmap <buffer> q :call :bd<CR>
 endfunction
 
 autocmd filetype netrw call s:NetrwMappings()
