@@ -1,4 +1,4 @@
-sudo apt install ruby &&
+sudo apt install ruby -y &&
 gem install homesick &&
 homesick clone https://github.com/TimUntersberger/dotfiles &&
 sudo apt install zsh tmux docker.io docker-compose -y &&
