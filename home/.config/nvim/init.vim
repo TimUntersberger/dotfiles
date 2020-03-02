@@ -15,6 +15,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
+" Custom plugin
+Plug '~/workspace/deta.nvim'
+
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 call plug#end()
 

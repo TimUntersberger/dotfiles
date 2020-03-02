@@ -24,6 +24,8 @@ export TERM="xterm-256color"
 
 export PATH="/home/tim/.yarn/bin:$PATH"
 
+precmd() { pwd > /tmp/whereami }
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

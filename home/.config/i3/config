@@ -1,7 +1,5 @@
 font pango:DejaVu Sans Mono 9
 
-client.focused	#268bd2   #268bd2   #ffffff   #268bd2  #268bd2
-
 # gaps inner 8
 # gaps outer 4
 
@@ -13,10 +11,13 @@ set $right l
 floating_modifier Mod1
 
 bindsym Mod1+d exec rofi -show run
-bindsym Mod1+Return exec gnome-terminal 
+bindsym Mod1+Return exec $HOME/.config/i3/gnome-terminal.sh
 bindsym Mod1+b exec firefox
 
 bindsym Mod1+Shift+q kill
+
+bindsym Mod1+Ctrl+h split h
+bindsym Mod1+Ctrl+v split v
 
 # change focus
 bindsym Mod1+$left focus left
