@@ -1,8 +1,8 @@
 let mapleader=','
+
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'morhetz/gruvbox'
 
-Plug 'haya14busa/is.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 
@@ -32,6 +32,17 @@ let g:coc_global_extensions=[
 " Make clap windows appear centered on vim not buffer
 let g:clap_layout = { 'relative': 'editor' }
 
+" Clap Rg provider
+
+function! RgSource()
+  return split(system('rg --files --hidden'), "\n")
+endfunction
+
+let g:clap_provider_Rg = {
+      \ 'source': function("RgSource"),
+      \ 'sink': 'e',
+      \ }
+
 colorscheme gruvbox
 
 " Disable auto pairs and auto indent stuff when pasting. REALLLLLLYYYY USEFULL
@@ -48,7 +59,7 @@ set noswapfile
 let g:netrw_banner=0
 
 set incsearch
-set hlsearch
+set nohlsearch
 
 " Enables hidden buffers -> don't have to write current buffer before using
 " goto functions
@@ -67,7 +78,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " nmap <leader>f :Files <CR>
 " nmap <leader>b :Buffers<CR>
 " nmap <leader>l :Ag<CR>
-nmap <leader>f :Clap files <CR>
+nmap <leader>f :Clap Rg <CR>
 nmap <leader>b :Clap buffers<CR>
 nmap <leader>l :Clap grep<CR>
 nmap <leader>s :Clap blines<CR>
@@ -146,6 +157,3 @@ function! s:NetrwMappings()
 endfunction
 
 autocmd filetype netrw call s:NetrwMappings()
-
-function! s:ClapMappings()
-endfunction
