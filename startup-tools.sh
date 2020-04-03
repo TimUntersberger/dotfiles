@@ -1,7 +1,6 @@
-sudo apt install ruby -y &&
+sudo apt install ruby zsh tmux docker.io docker-compose git -y &&
 sudo gem install homesick &&
 homesick clone https://github.com/TimUntersberger/dotfiles &&
-sudo apt install zsh tmux docker.io docker-compose -y &&
 curl -L git.io/antigen > ~/.antigen.zsh &&
 chsh -s $(which zsh) &&
 curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage &&
