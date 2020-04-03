@@ -11,7 +11,7 @@ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n &&
 sudo chmod +x ./n &&
 sudo mv ./n /usr/bin/n
 sudo n lts &&
-vim +PlugInstall +q +q &&
+nvim +PlugInstall +q +q &&
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb &&
 sudo dpkg -i ripgrep_11.0.2_amd64.deb
