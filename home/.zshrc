@@ -9,6 +9,7 @@ antigen bundle docker
 antigen bundle httpie
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
+antigen bundle zsh-users/zsh-autosuggestions
 
 antigen apply
 
