@@ -2,23 +2,18 @@ let mapleader=','
 
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'morhetz/gruvbox'
-
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-Plug 'christoomey/vim-tmux-navigator'
-
+Plug 'lilydjwg/colorizer'
+Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-fugitive'
-
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 
 " Custom plugin
 Plug '~/workspace/deta.nvim'
-
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 call plug#end()
 
 let g:coc_global_extensions=[
@@ -28,6 +23,8 @@ let g:coc_global_extensions=[
 	\'coc-tsserver',
   \'coc-prettier',
 \]
+
+let g:sneak#label = 1
 
 " Make clap windows appear centered on vim not buffer
 let g:clap_layout = { 'relative': 'editor' }
@@ -48,6 +45,9 @@ colorscheme gruvbox
 " Disable auto pairs and auto indent stuff when pasting. REALLLLLLYYYY USEFULL
 set pastetoggle=<F3>
 
+" For parcel bundler. 
+set backupcopy=yes
+
 set splitright
 
 set cursorline
@@ -57,6 +57,8 @@ set noswapfile
 
 " hide netrw comment on top
 let g:netrw_banner=0
+
+let g:netrw_liststyle = 3
 
 set incsearch
 set nohlsearch
@@ -75,10 +77,10 @@ set shortmess+=c
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-" nmap <leader>f :Files <CR>
 " nmap <leader>b :Buffers<CR>
 " nmap <leader>l :Ag<CR>
-nmap <leader>f :Clap Rg <CR>
+nmap <leader>r :Clap Rg <CR>
+nmap <leader>f :Clap files <CR>
 nmap <leader>b :Clap buffers<CR>
 nmap <leader>l :Clap grep<CR>
 nmap <leader>s :Clap blines<CR>
@@ -86,8 +88,9 @@ nmap <silent> <leader>e :Explore<CR>
 nmap <leader>a :CocAction<CR>
 
 nmap <leader>gs :Gedit :<CR>
+nmap <leader>gp :Gpush <CR>
 
-nmap ; :
+nnoremap <s-c> cc
 
 inoremap <silent><expr> <c-n> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -104,7 +107,7 @@ nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gh :call CocAction('doHover')<CR>
-nmap <leader>rn <Plug>(coc-rename)
+nmap <silent> gn <Plug>(coc-rename)
 
 nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k

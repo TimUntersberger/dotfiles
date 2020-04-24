@@ -11,7 +11,7 @@ set $right l
 floating_modifier Mod1
 
 bindsym Mod1+d exec rofi -show run
-bindsym Mod1+Return exec $HOME/.config/i3/gnome-terminal.sh
+bindsym Mod1+Return exec kitty sh -c 'cd $(cat /tmp/whereami) && clear && exec zsh'
 bindsym Mod1+b exec firefox
 
 bindsym Mod1+Shift+q kill

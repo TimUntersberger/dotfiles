@@ -26,6 +26,8 @@ export TERM="xterm-256color"
 
 export PATH="/home/tim/.yarn/bin:$PATH"
 
+export JAVA_HOME="~/.sdkman/candidates/java/current"
+
 precmd() { pwd > /tmp/whereami }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
