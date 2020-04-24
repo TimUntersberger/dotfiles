@@ -24,6 +24,8 @@ let g:coc_global_extensions=[
   \'coc-prettier',
 \]
 
+set noshowmode
+
 let g:sneak#label = 1
 
 " Make clap windows appear centered on vim not buffer
@@ -99,8 +101,11 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
       \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+nmap <silent> <c-c>r <Plug>(coc-refactor)
+nmap <silent> <c-c>i <Plug>(coc-diagnostic-info)
+nmap <silent> [e <Plug>(coc-diagnostic-prev)
+nmap <silent> ]e <Plug>(coc-diagnostic-next)
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
@@ -108,6 +113,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gh :call CocAction('doHover')<CR>
 nmap <silent> gn <Plug>(coc-rename)
+nmap <silent> gw <Plug>(coc-float-jump)
+nmap <silent> [e <Plug>(coc-diagnostic-prev)
 
 nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
