@@ -5,12 +5,13 @@ Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vn-ki/coc-clap'
 Plug 'lilydjwg/colorizer'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' } 
 Plug 'caenrique/nvim-maximize-window-toggle'
 
 " Custom plugin
@@ -23,6 +24,7 @@ let g:coc_global_extensions=[
   \'coc-emmet',
 	\'coc-tsserver',
   \'coc-prettier',
+  \'coc-marketplace'
 \]
 
 set noshowmode
