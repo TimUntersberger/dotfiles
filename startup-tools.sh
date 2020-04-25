@@ -1,11 +1,11 @@
 sudo apt install ruby zsh tmux docker.io docker-compose git -y &&
 sudo gem install homesick &&
-homesick clone https://github.com/TimUntersberger/dotfiles &&
-curl -L git.io/antigen > ~/.antigen.zsh &&
-curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage &&
+sudo homesick clone https://github.com/TimUntersberger/dotfiles &&
+sudo curl -L git.io/antigen > ~/.antigen.zsh &&
+sudo curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage &&
 chmod u+x nvim.appimage && 
 sudo mv nvim.appimage /usr/bin/nvim &&
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+sudo curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
 homesick link &&
 curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n &&
