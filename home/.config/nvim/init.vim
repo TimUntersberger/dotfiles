@@ -11,6 +11,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+Plug 'caenrique/nvim-maximize-window-toggle'
 
 " Custom plugin
 Plug '~/workspace/deta.nvim'
@@ -78,6 +79,8 @@ set updatetime=300
 set shortmess+=c
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+nnoremap <C-f> :ToggleOnly<Enter>
 
 " nmap <leader>b :Buffers<CR>
 " nmap <leader>l :Ag<CR>

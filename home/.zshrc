@@ -28,6 +28,8 @@ export PATH="/home/tim/.yarn/bin:$PATH"
 
 export JAVA_HOME="~/.sdkman/candidates/java/current"
 
+export EDITOR=vim
+
 precmd() { pwd > /tmp/whereami }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

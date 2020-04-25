@@ -2,7 +2,6 @@
   "suggest.enablePreview": true,
   "suggest.disableMenu": true,
   "diagnostic.format": "[%severity] %message",
-  "codeLens.enable": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "Markdown",
