@@ -82,17 +82,16 @@ set shortmess+=c
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-nnoremap <C-f> :ToggleOnly<Enter>
+nnoremap <C-f> :ToggleOnly<CR>
 
-" nmap <leader>b :Buffers<CR>
-" nmap <leader>l :Ag<CR>
 nmap <leader>r :Clap Rg <CR>
 nmap <leader>f :Clap files <CR>
 nmap <leader>b :Clap buffers<CR>
 nmap <leader>l :Clap grep<CR>
 nmap <leader>s :Clap blines<CR>
 nmap <silent> <leader>e :Explore<CR>
-nmap <leader>a :CocAction<CR>
+nmap <leader>d :Clap coc_diagnostics<CR>
+nmap <leader>a :Clap coc_actions<CR>
 
 nmap <leader>gs :Gedit :<CR>
 nmap <leader>gp :Gpush <CR>
