@@ -11,6 +11,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'machakann/vim-swap'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' } 
 Plug 'caenrique/nvim-maximize-window-toggle'
 
