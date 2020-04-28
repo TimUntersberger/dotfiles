@@ -15,6 +15,7 @@ antigen bundle subnixr/minimal
 antigen apply
 
 alias vim=nvim
+alias dc=docker-compose
 
 function sha256() { echo -n $1 | sha256sum | cut -d ' ' -f1 }
 
@@ -28,7 +29,7 @@ export PATH="/home/tim/.yarn/bin:$PATH"
 
 export JAVA_HOME="~/.sdkman/candidates/java/current"
 
-export EDITOR=vim
+export EDITOR=nvim
 
 precmd() { pwd > /tmp/whereami }
 

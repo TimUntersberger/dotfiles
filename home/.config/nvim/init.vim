@@ -5,7 +5,6 @@ Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vn-ki/coc-clap'
 Plug 'lilydjwg/colorizer'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-fugitive'
@@ -90,8 +89,8 @@ nmap <leader>b :Clap buffers<CR>
 nmap <leader>l :Clap grep<CR>
 nmap <leader>s :Clap blines<CR>
 nmap <silent> <leader>e :Explore<CR>
-nmap <leader>d :Clap coc_diagnostics<CR>
-nmap <leader>a :Clap coc_actions<CR>
+nmap <leader>d :CocList diagnostics<CR>
+nmap <leader>a :CocList actions<CR>
 
 nmap <leader>gs :Gedit :<CR>
 nmap <leader>gp :Gpush <CR>
