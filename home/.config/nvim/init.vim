@@ -2,6 +2,7 @@ let mapleader=','
 
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'morhetz/gruvbox'
+Plug 'fxn/vim-monochrome'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
