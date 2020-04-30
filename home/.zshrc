@@ -35,6 +35,8 @@ precmd() { pwd > /tmp/whereami }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
+
 function loadEspIdf() {
   export IDF_PATH=~/esp/esp-idf
   . $HOME/esp/esp-idf/export.sh

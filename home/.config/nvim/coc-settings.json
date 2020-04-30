@@ -1,7 +1,21 @@
 {
   "suggest.enablePreview": true,
   "suggest.disableMenu": true,
-  "diagnostic.format": "[%severity] %message",
+  "diagnostic.format": "%message",
+  "diagnostic.infoSign": "\uf0c8",
+  "diagnostic.errorSign": "\uf0c8",
+  "diagnostic.warningSign": "\uf0c8",
+  "suggest.completionItemKindLabels": {
+    "function": "\uf1b2",
+    "method": "\uf1b2",
+    "property": "\ufab6",
+    "field": "\ufab6",
+    "constant": "\uf111",
+    "variable": "\uf1db",
+    "keyword": "\uf219",
+    "text": "\ue612",
+    "folder": "\uf114"
+  },
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "Markdown",
